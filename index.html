@@ -91,11 +91,16 @@ input[type="password"]::placeholder {
 
 <script>
   const loveQuotes = [
-    "You have bewitched me, body and soul.",
-    "I have waited for this opportunity for more than half a century, to repeat to you once again my vow of eternal fidelity and everlasting love.",
-    "You have bewitched me, body and soul, and I love, I love, I love you.",
-    "If you live to be a hundred, I want to live to be a hundred minus one day, so I never have to live without you.",
-    "I would rather share one lifetime with you than face all the ages of this world alone."
+  "Love is composed of a single soul inhabiting two bodies. - Aristotle",
+  "The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves. - Victor Hugo",
+  "To love and be loved is to feel the sun from both sides. - David Viscott",
+  "Love is like the wind, you can't see it but you can feel it. - Nicholas Sparks",
+  "Love recognises no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope. - Maya Angelou",
+  "The best love is the kind that awakens the soul; that makes us reach for more, that plants the fire in our hearts and brings peace to our minds. - Nicholas Sparks",
+  "Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day. - Unknown",
+  "Love is an irresistible desire to be irresistibly desired. - Robert Frost",
+  "In the end, the love you take is equal to the love you make. - Paul McCartney",
+  "Love isn't something you find. Love is something that finds you. - Loretta Young"
   ];
 
   const passwordForm = document.getElementById('passwordForm');
@@ -109,7 +114,7 @@ input[type="password"]::placeholder {
       window.location.href = 'page2.html';
     } else {
       const randomQuote = loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
-      errorMessage.textContent = `Wrong password. Try again! Here's a love quote to inspire you: ${randomQuote}`;
+      errorMessage.textContent = `Wrong password. Try again! Password hint: HeLovesYou - Here's a love quote to inspire you: ${randomQuote}`;
     }
   });
 </script>
