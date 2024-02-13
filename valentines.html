@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our 10th Valentine's Day</title>
+<style>
+body {
+  background-color: #f9e0e3;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d9304e; 
+  font-size: 90px;
+  text-align: center;
+}
+
+p {
+  color: #5c4a72; 
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff8b94; 
+  color: white;
+  border: none;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #e74c3c; 
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  justify-content: center; 
+  align-items: center;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  border-color: #ff8b94; 
+}
+
+input[type="password"]::placeholder {
+  color: #ccc;
+}
+
+.error-message {
+  color: #e74c3c; 
+}
+
+.quote {
+  font-style: italic;
+  color: #d9304e; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Happy 10th Valentine's Day, Nolzy♥!</h1>
+  <p>Enter the secret code to proceed:</p>
+  <form id="passwordForm">
+    <input type="password" id="passwordInput" required>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="errorMessage"></p>
+</div>
+
+<script>
+  const loveQuotes = [
+    "You have bewitched me, body and soul.",
+    "I have waited for this opportunity for more than half a century, to repeat to you once again my vow of eternal fidelity and everlasting love.",
+    "You have bewitched me, body and soul, and I love, I love, I love you.",
+    "If you live to be a hundred, I want to live to be a hundred minus one day, so I never have to live without you.",
+    "I would rather share one lifetime with you than face all the ages of this world alone."
+  ];
+
+  const passwordForm = document.getElementById('passwordForm');
+  const passwordInput = document.getElementById('passwordInput');
+  const errorMessage = document.getElementById('errorMessage');
+
+  passwordForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const enteredPassword = passwordInput.value.trim();
+    if (enteredPassword === 'RomeoLovesNolzy') {
+      window.location.href = 'page2.html';
+    } else {
+      const randomQuote = loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
+      errorMessage.textContent = `Wrong password. Try again! Here's a love quote to inspire you: ${randomQuote}`;
+    }
+  });
+</script>
+</body>
+</html>

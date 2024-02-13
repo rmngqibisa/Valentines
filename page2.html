@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our 10th Valentine's Day</title>
+<style>
+body {
+  background-color: #f9e0e3;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d9304e; 
+  font-size: 90px;
+  text-align: center;
+}
+
+p {
+  color: #5c4a72; 
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff8b94; 
+  color: white;
+  border: none;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #e74c3c; 
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  justify-content: center; 
+  align-items: center;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  border-color: #ff8b94; 
+}
+
+input[type="password"]::placeholder {
+  color: #ccc;
+}
+
+.error-message {
+  color: #e74c3c; 
+}
+
+.quote {
+  font-style: italic;
+  color: #d9304e; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Will you be my Valentine for the 10th time?</h1>
+  <form id="valentineForm">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </form>
+</div>
+<script>
+  const yesButton = document.getElementById('yesButton');
+  const noButton = document.getElementById('noButton');
+
+  yesButton.addEventListener('click', function() {
+    window.location.href = 'page3.html';
+  });
+
+  noButton.addEventListener('click', function() {
+    const confirmChoice = confirm("Are you sure you don't want to be my Valentine?");
+    if (confirmChoice) {
+      alert("It's okay. Maybe next year! Ke tla nwa meetsi💔...");
+    }
+  });
+</script>
+</body>
+</html>
