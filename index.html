@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
 .container {
@@ -114,7 +114,7 @@ input[type="password"]::placeholder {
       window.location.href = 'page2.html';
     } else {
       const randomQuote = loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
-      errorMessage.textContent = `Wrong password. Try again! Password hint: HeLovesYou - Here's a love quote to inspire you: ${randomQuote}`;
+      errorMessage.innerHTML = `Wrong password. Try again!<br><br>Password hint: HeLovesYou<br><br>Here's a love quote to inspire you: ${randomQuote}`;
     }
   });
 </script>
